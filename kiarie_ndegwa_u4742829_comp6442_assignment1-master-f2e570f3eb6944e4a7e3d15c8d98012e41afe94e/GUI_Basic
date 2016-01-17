@@ -1,0 +1,24 @@
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
+
+
+public class GUI_Basic{
+	
+	JFrame jframe;
+	
+
+	public GUI_exit() {
+		SwingUtilities.invokeLater(new Runnable(){
+		public void run(){
+		jframe  = new JFrame("Hello world!");
+		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jframe.getContentPane().add(new JLabel("<html><font size = 7><em>Click exit!</font></em></html>"));
+		jframe.setVisible(true);
+		jframe.pack();
+		}});
+	}
+	public static void main(String args[]) {
+		new GUI_exit();
+	}
+}
